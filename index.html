@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周小胖砂锅烧烤 · 开业营销方案</title>
+<style>
+/* ==================== Reset & Base ==================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: #FDF8F5;
+  color: #2D1B1B;
+  line-height: 1.8;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ==================== Cat Paw Floating Animation ==================== */
+.paw-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.paw {
+  position: absolute;
+  bottom: -60px;
+  opacity: 0;
+  animation: pawFloat 8s ease-in-out infinite;
+}
+.paw:nth-child(1) { left: 3%; animation-delay: 0s; font-size: 22px; }
+.paw:nth-child(2) { left: 12%; animation-delay: 1.5s; font-size: 16px; }
+.paw:nth-child(3) { left: 22%; animation-delay: 2.8s; font-size: 24px; }
+.paw:nth-child(4) { left: 35%; animation-delay: 0.6s; font-size: 18px; }
+.paw:nth-child(5) { left: 48%; animation-delay: 3.5s; font-size: 20px; }
+.paw:nth-child(6) { left: 58%; animation-delay: 1.2s; font-size: 16px; }
+.paw:nth-child(7) { left: 70%; animation-delay: 4.2s; font-size: 22px; }
+.paw:nth-child(8) { left: 80%; animation-delay: 2.2s; font-size: 17px; }
+.paw:nth-child(9) { left: 90%; animation-delay: 3.8s; font-size: 14px; }
+.paw:nth-child(10) { left: 96%; animation-delay: 5.0s; font-size: 19px; }
+
+@keyframes pawFloat {
+  0% { transform: translateY(0) rotate(0deg) scale(0.5); opacity: 0; }
+  15% { opacity: 0.3; }
+  50% { opacity: 0.18; transform: translateY(-50vh) rotate(12deg) scale(1); }
+  85% { opacity: 0.06; }
+  100% { transform: translateY(-100vh) rotate(25deg) scale(0.5); opacity: 0; }
+}
+
+/* ==================== Layout ==================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== Hero ==================== */
+.hero {
+  background: linear-gradient(135deg, #FDF8F5 0%, #FFF5F0 40%, #F8F0E3 100%);
+  padding: 80px 0 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle at 30% 50%, rgba(255,215,0,0.05) 0%, transparent 60%),
+              radial-gradient(circle at 70% 30%, rgba(216,27,96,0.04) 0%, transparent 50%);
+  animation: heroGlow 10s ease-in-out infinite;
+}
+@keyframes heroGlow {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-2%, -1%); }
+}
+.hero-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #C2185B, #8B2252);
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.hero h1 {
+  font-size: 3em;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FDF8F5 0%, #C2185B 40%, #8B2252 70%, #4A0024 100%);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleFlow 4s ease infinite;
+  position: relative;
+  display: inline-block;
+}
+@keyframes titleFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.hero-cat {
+  margin: 15px 0;
+  font-size: 2.8em;
+  line-height: 1;
+  filter: drop-shadow(0 2px 8px rgba(255,215,0,0.3));
+  animation: catBounce 3s ease-in-out infinite;
+}
+@keyframes catBounce {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-6px) rotate(2deg); }
+}
+.hero-sub {
+  font-size: 1.1em;
+  color: #8A6A6A;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+.hero-meta span {
+  color: #8A6A6A;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-meta .dot { color: #C2185B; }
+
+/* ==================== Section Common ==================== */
+.section {
+  padding: 50px 0;
+  position: relative;
+}
+.section-title {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #4A0024;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #D81B60 0%, transparent 100%);
+  margin-left: 15px;
+}
+
+/* ==================== Card ==================== */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(139,34,82,0.06);
+  border: 1px solid rgba(216,27,96,0.08);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  animation: cardGlow 4s ease-in-out infinite;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(139,34,82,0.12);
+  border-color: rgba(216,27,96,0.2);
+}
+@keyframes cardGlow {
+  0%, 100% { box-shadow: 0 2px 12px rgba(139,34,82,0.06); }
+  50% { box-shadow: 0 2px 20px rgba(216,27,96,0.1); }
+}
+.card-title {
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #4A0024;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card p, .card li { color: #2D1B1B; font-size: 15px; line-height: 1.9; }
+.card ul { padding-left: 20px; }
+.card ul li { margin-bottom: 6px; }
+.tag {
+  display: inline-block;
+  padding: 2px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+.tag-pink { background: rgba(216,27,96,0.1); color: #C2185B; }
+.tag-gold { background: rgba(255,215,0,0.2); color: #B8860B; }
+.tag-gray { background: #F5F0EC; color: #8A6A6A; }
+
+/* ==================== Strategy Lock ==================== */
+.strategy-lock {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #FDF8F5, #FFF5F0);
+  border-radius: 16px;
+  border: 2px dashed rgba(216,27,96,0.2);
+  position: relative;
+}
+.strategy-lock .lock-icon { font-size: 48px; margin-bottom: 15px; }
+.strategy-lock h3 { color: #4A0024; font-size: 1.2em; margin-bottom: 10px; }
+.strategy-lock p { color: #8A6A6A; font-size: 14px; margin-bottom: 20px; }
+.strategy-lock .paw-divider { color: rgba(216,27,96,0.2); font-size: 20px; letter-spacing: 8px; margin-bottom: 20px; }
+.pwd-input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.pwd-input-group input {
+  padding: 10px 18px;
+  border: 2px solid rgba(216,27,96,0.2);
+  border-radius: 8px;
+  font-size: 16px;
+  width: 160px;
+  outline: none;
+  background: #fff;
+  color: #2D1B1B;
+  text-align: center;
+  letter-spacing: 8px;
+  transition: border-color 0.3s;
+}
+.pwd-input-group input:focus { border-color: #C2185B; }
+.pwd-btn {
+  padding: 10px 28px;
+  background: linear-gradient(135deg, #C2185B, #8B2252);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.pwd-btn:hover { opacity: 0.9; transform: scale(1.02); }
+.pwd-error { color: #D81B60; font-size: 13px; margin-top: 10px; display: none; }
+.strategy-content { display: none; animation: fadeIn 0.5s ease; }
+.strategy-content.active { display: block; }
+
+/* ==================== Pricing Table ==================== */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 15px;
+}
+.pricing-item {
+  background: #FDF8F5;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(216,27,96,0.1);
+  transition: all 0.3s;
+}
+.pricing-item:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(139,34,82,0.1); }
+.pricing-item .price { font-size: 1.8em; font-weight: 800; color: #C2185B; }
+.pricing-item .price-unit { font-size: 14px; color: #8A6A6A; }
+.pricing-item .price-label { font-size: 13px; color: #8A6A6A; margin-top: 4px; }
+.pricing-item.hot { border-color: #FFD700; background: linear-gradient(135deg, #FDF8F5, #FFF8E7); }
+
+/* ==================== Timeline ==================== */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #C2185B, rgba(216,27,96,0.1));
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 25px;
+  padding-left: 20px;
+}
+.timeline-item::before {
+  content: '🐾';
+  position: absolute;
+  left: -22px;
+  top: 0;
+  font-size: 14px;
+}
+.timeline-item .tl-title { font-weight: 600; color: #4A0024; }
+.timeline-item .tl-date { font-size: 13px; color: #C2185B; font-weight: 600; }
+.timeline-item p { color: #2D1B1B; font-size: 14px; margin-top: 4px; }
+
+/* ==================== DM Preview ==================== */
+.dm-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.dm-face {
+  background: linear-gradient(135deg, #FFF5F0, #F8F0E3);
+  border-radius: 12px;
+  padding: 25px;
+  min-height: 280px;
+  border: 1px solid rgba(216,27,96,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.dm-face .dm-title { font-size: 1.5em; font-weight: 800; color: #4A0024; }
+.dm-face .dm-sub { color: #C2185B; font-size: 14px; margin: 8px 0; }
+.dm-face .dm-price { font-size: 2em; font-weight: 800; color: #C2185B; margin: 10px 0; }
+.dm-face .dm-code-area {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.dm-code-box {
+  width: 80px; height: 80px;
+  background: repeating-linear-gradient(45deg, #FFF8E7, #FFF8E7 4px, #fff 4px, #fff 8px);
+  border-radius: 6px;
+  border: 1px solid rgba(255,215,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #8A6A6A;
+}
+
+/* ==================== Budget ==================== */
+.budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.budget-table th {
+  background: linear-gradient(135deg, #C2185B, #8B2252);
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+}
+.budget-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(216,27,96,0.08);
+}
+.budget-table tr:hover td { background: rgba(216,27,96,0.03); }
+.budget-table .total td { font-weight: 700; color: #C2185B; }
+
+/* ==================== KPI Grid ==================== */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+.kpi-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(216,27,96,0.08);
+  transition: all 0.3s;
+}
+.kpi-item:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(255,215,0,0.15); }
+.kpi-item .kpi-num { font-size: 2em; font-weight: 800; color: #C2185B; }
+.kpi-item .kpi-label { font-size: 13px; color: #8A6A6A; margin-top: 4px; }
+.kpi-item .kpi-sub { font-size: 12px; color: #B8860B; margin-top: 2px; }
+
+/* ==================== Footer ==================== */
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  color: #8A6A6A;
+  font-size: 13px;
+  border-top: 1px solid rgba(216,27,96,0.08);
+  margin-top: 30px;
+}
+.footer .paw-line { letter-spacing: 6px; font-size: 18px; margin-bottom: 10px; color: rgba(216,27,96,0.2); }
+
+/* ==================== Responsive ==================== */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2em; }
+  .hero { padding: 50px 0 40px; }
+  .section { padding: 30px 0; }
+  .section-title { font-size: 1.3em; }
+  .card { padding: 20px; }
+  .dm-preview { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-meta { gap: 15px; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.6em; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .kpi-grid { grid-template-columns: 1fr; }
+  .pwd-input-group { flex-direction: column; }
+}
+
+/* ==================== Misc ==================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.divider-paw {
+  text-align: center;
+  color: rgba(216,27,96,0.15);
+  font-size: 16px;
+  letter-spacing: 10px;
+  margin: 25px 0;
+}
+.highlight-pink {
+  color: #C2185B;
+  font-weight: 600;
+}
+.highlight-gold {
+  color: #B8860B;
+  font-weight: 600;
+}
+.bg-alt {
+  background: #FFF5F0;
+}
+
+/* ==================== Cat Whiskers Divider ==================== */
+.cat-whiskers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 25px 0;
+  color: rgba(255,215,0,0.3);
+  font-size: 20px;
+}
+
+/* ==================== Cheese Style Accent ==================== */
+.cheese-accent {
+  background: linear-gradient(135deg, #FFF8E7, #FFFAF0);
+  border: 1px solid rgba(255,215,0,0.2);
+}
+
+/* ==================== Cat Silhouette Decoration ==================== */
+.cat-deco {
+  display: inline-block;
+  font-size: 2em;
+  line-height: 1;
+  margin: 0 4px;
+}
+</style>
+</head>
+<body>
+
+<!-- 🐾 Cat Paw + Cat Face Floating Animation -->
+<div class="paw-container">
+  <span class="paw">🐾</span>
+  <span class="paw">😺</span>
+  <span class="paw">🐾</span>
+  <span class="paw">🧡</span>
+  <span class="paw">🐾</span>
+  <span class="paw">😸</span>
+  <span class="paw">🐾</span>
+  <span class="paw">🐱</span>
+  <span class="paw">🐾</span>
+  <span class="paw">🐾</span>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">🐱 新店开业 · 筹备中</div>
+    <div class="hero-cat">😺 🧡 😺</div>
+    <h1>周小胖 🐱 砂锅烧烤</h1>
+    <p class="hero-sub">重庆砂锅 · 天津烤串 · 社区小店 · 起司猫小胖</p>
+    <div class="hero-meta">
+      <span>📍 天津塘沽 · 杭州道街道抗震路</span>
+      <span class="dot">·</span>
+      <span>📐 约80㎡ · 社区底商</span>
+      <span class="dot">·</span>
+      <span>💰 人均 ¥40-50</span>
+      <span class="dot">·</span>
+      <span>⭐ 暂无评分 · 新店开业</span>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+<!-- ==================== 1. 背景概述 ==================== -->
+<section class="section" id="bg">
+  <h2 class="section-title">😺 背景概述</h2>
+  <div class="card">
+    <div class="card-title">📍 店铺定位</div>
+    <p>周小胖砂锅烧烤坐落于 <strong>天津塘沽杭州道街道抗震路</strong>，是一家约 <strong>80㎡</strong> 的社区底商小店。以 <span class="highlight-pink">重庆风味砂锅</span> 为核心，搭配少量天津本地烧烤，走亲民、温馨的社区路线，预估人均 <strong>¥40-50</strong>。</p>
+  </div>
+  <div class="card">
+    <div class="card-title">👩‍🍳 老板人设</div>
+    <p>老板是地道的 <strong>重庆姑娘</strong>，嫁到天津后与本地老公共同创业。<span class="highlight-pink">"周小胖"</span> 既是店名，也是老板的亲切昵称——就像一只 <strong>奶橘色的起司猫 🧡😺</strong>，软萌可爱又有重庆人的火辣热情。重庆人的豪爽 + 天津人的幽默实在，构成了这家店独特的 <span class="highlight-pink">"渝津融合"</span> 气质——砂锅的麻辣鲜香配上天津烤串的烟火气，正如这门跨地域的姻缘一样别具风味。</p>
+  </div>
+  <div class="card">
+    <div class="card-title">🍳 品类结构</div>
+    <div class="tag tag-pink">🍲 招牌重庆麻辣砂锅</div>
+    <div class="tag tag-gold">🔥 天津烤串</div>
+    <div class="tag tag-gray">🧊 解辣饮品</div>
+    <p style="margin-top:10px;">以重庆砂锅为流量主力（丰富配菜+麻辣鲜香），天津烤串为复购抓手，搭配自制解辣饮品形成完整产品矩阵。</p>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 2. 整体策略框架 ==================== -->
+<section class="section" id="strategy">
+  <h2 class="section-title">🔒 整体策略框架</h2>
+  <div class="card">
+    <p style="margin-bottom:15px;">核心理念：<strong>社区渗透三件套</strong> —— <span class="highlight-pink">围挡蓄水 → 邻里地推 → 社群锁客 → 外卖增量</span></p>
+
+    <!-- Lock -->
+    <div class="strategy-lock" id="strategyLock">
+      <div class="lock-icon">🔒</div>
+      <div class="paw-divider">🐾 😺 🐾 😺 🐾</div>
+      <h3>🔐 策略内容已加密</h3>
+      <p>输入密码查看完整策略框架</p>
+      <div class="pwd-input-group">
+        <input type="password" id="pwdInput" placeholder="请输入密码" maxlength="6">
+        <button class="pwd-btn" onclick="unlockStrategy()">解锁 🔓</button>
+      </div>
+      <div class="pwd-error" id="pwdError">❌ 密码错误，请重试</div>
+    </div>
+
+    <!-- Strategy Content -->
+    <div class="strategy-content" id="strategyContent">
+      <div class="card" style="background:#FFF5F0;border-left:4px solid #C2185B;">
+        <p><strong>📌 整体策略："社区渗透三件套 + 外卖增量"</strong></p>
+        <p style="margin-top:10px;">围绕 <span class="highlight-pink">"周小胖"老板人设</span>，通过围挡蓄水（收集潜在客资）→ 邻里地推（DM单+扫码进群）→ 社群锁客（每日福利+人设运营）→ 外卖增量（美团外卖覆盖周边3km），实现社区门店的持续获客和复购闭环。</p>
+      </div>
+      <div class="card">
+        <div class="card-title">📋 四大阶段</div>
+        <table style="width:100%;font-size:14px;border-collapse:collapse;">
+          <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+            <td style="padding:8px 0;font-weight:600;color:#C2185B;">① 围挡蓄水期</td>
+            <td style="padding:8px 0;">开业前10天，围挡+DM预热，扫码领券+加群抽奖</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+            <td style="padding:8px 0;font-weight:600;color:#C2185B;">② 邻里地推期</td>
+            <td style="padding:8px 0;">周边3小区+沿街商铺，DM单+口播话术，扫码进群领红包</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+            <td style="padding:8px 0;font-weight:600;color:#C2185B;">③ 社群锁客期</td>
+            <td style="padding:8px 0;">每日双时段推送，邻里特惠+老板故事，持续激活</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 0;font-weight:600;color:#C2185B;">④ 外卖增量期</td>
+            <td style="padding:8px 0;">美团外卖同步上线，覆盖周边3km社区，配合社群引流</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 3. DM单版面设计 ==================== -->
+<section class="section" id="dm">
+  <h2 class="section-title">📄 DM单版面设计</h2>
+  <div class="card">
+    <div class="card-title">🖨️ 规格：A5双面 · 128g铜版纸</div>
+    <div class="dm-preview">
+      <div class="dm-face">
+        <div style="font-size:28px;">😺 🧡</div>
+        <div class="dm-title">周小胖砂锅烧烤</div>
+        <div class="dm-sub">重庆砂锅 🫕 + 天津烤串 🔥</div>
+        <div class="dm-price">开业钜惠</div>
+        <p style="font-size:13px;color:#8A6A6A;">扫码领券 · 加群抢红包</p>
+        <div class="dm-code-area">
+          <div class="dm-code-box">📱 团购券</div>
+          <div class="dm-code-box">💬 加群</div>
+        </div>
+        <p style="font-size:11px;color:#8A6A6A;margin-top:10px;">📍 天津塘沽杭州道街道抗震路</p>
+      </div>
+      <div class="dm-face" style="background:linear-gradient(135deg,#F8F0E3,#FDF8F5);">
+        <div class="dm-title" style="font-size:1.2em;">🔥 开业福利</div>
+        <p style="margin:10px 0;font-size:14px;color:#2D1B1B;">
+          <strong>🎁 福利一</strong> 扫码领 <span class="highlight-pink">¥19.9</span> 尝鲜券<br>
+          <strong>🎁 福利二</strong> 加群领 <span class="highlight-pink">红包</span> + 每日特惠<br>
+          <strong>🎁 福利三</strong> 到店消费参与 <span class="highlight-pink">抽奖</span>
+        </p>
+        <div style="margin-top:10px;padding:8px 20px;background:#C2185B;color:#fff;border-radius:20px;font-size:13px;">
+          🐾 周小胖等你来～ 😺
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 4. 大众点评团购设计 ==================== -->
+<section class="section" id="tuangou">
+  <h2 class="section-title">🛒 大众点评团购设计</h2>
+  <div class="card">
+    <p style="margin-bottom:15px;">以 <span class="highlight-pink">¥19.9 引流款</span> 为钩子，带动双人/多人套餐转化，打造阶梯式团购矩阵：</p>
+    <div class="pricing-grid">
+      <div class="pricing-item hot">
+        <div style="font-size:28px;margin-bottom:5px;">🔥 😺</div>
+        <div class="price">¥19.9</div>
+        <div class="price-label">单人砂锅套餐 <span class="tag tag-gold" style="font-size:11px;">引流款</span></div>
+        <div style="font-size:12px;color:#8A6A6A;margin-top:5px;">招牌砂锅+米饭+饮品</div>
+      </div>
+      <div class="pricing-item">
+        <div class="price">¥58.8</div>
+        <div class="price-label">双人餐</div>
+        <div style="font-size:12px;color:#8A6A6A;margin-top:5px;">砂锅+烤串+解辣饮品</div>
+      </div>
+      <div class="pricing-item">
+        <div class="price">¥98.8</div>
+        <div class="price-label">2-3人餐</div>
+        <div style="font-size:12px;color:#8A6A6A;margin-top:5px;">双砂锅+烤串拼盘+饮品</div>
+      </div>
+      <div class="pricing-item">
+        <div class="price">¥158</div>
+        <div class="price-label">3-4人餐</div>
+        <div style="font-size:12px;color:#8A6A6A;margin-top:5px;">全砂锅+烤串大拼+饮品</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 5. 扫码领券私域方案 ==================== -->
+<section class="section" id="siyu">
+  <h2 class="section-title">💬 扫码领券私域方案</h2>
+  <div class="card">
+    <div class="card-title">👩‍🍳 "周小胖"老板人设运营群</div>
+    <p><strong>群定位：</strong>不是冷冰冰的营销群，而是"周小胖"的邻里朋友圈。老板以重庆姑娘 + 起司猫人设 🧡😺 每日分享砂锅故事、生活日常、限时福利。</p>
+  </div>
+  <div class="card">
+    <div class="card-title">⏰ 每日双时段推送</div>
+    <table style="width:100%;font-size:14px;border-collapse:collapse;">
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+        <td style="padding:8px 10px;background:#FFF5F0;font-weight:600;width:100px;">🌅 11:00</td>
+        <td style="padding:8px 10px;">午餐预告：今日砂锅推荐 + 限量特价 + 老板故事</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 10px;background:#FFF5F0;font-weight:600;">🌇 17:00</td>
+        <td style="padding:8px 10px;">晚餐红包：群友专享折扣 + 当日新鲜食材播报</td>
+      </tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="card-title">🎁 邻里特惠机制</div>
+    <ul>
+      <li><strong>进群礼：</strong>进群即领 <span class="highlight-pink">¥3 立减券</span>（无门槛）</li>
+      <li><strong>每日抽奖：</strong>群内每日抽取 <span class="highlight-pink">3位幸运邻居</span> 送小菜/饮品</li>
+      <li><strong>邻里价：</strong>群成员享 <span class="highlight-pink">"邻里特惠套餐"</span>（比团购更优）</li>
+      <li><strong>充值福利：</strong>充200送30 · 充500送100（仅限群成员）</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 6. 开业现场活动设计 ==================== -->
+<section class="section" id="opening">
+  <h2 class="section-title">🎉 开业现场活动设计</h2>
+  <div class="card">
+    <table style="width:100%;font-size:14px;border-collapse:collapse;">
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+        <td style="padding:10px;font-weight:600;color:#C2185B;width:100px;">🎯 A</td>
+        <td style="padding:10px;"><strong>尝鲜引流</strong></td>
+        <td style="padding:10px;">全场88折 + 到店送凉菜一份</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+        <td style="padding:10px;font-weight:600;color:#C2185B;">🎯 B</td>
+        <td style="padding:10px;"><strong>复购锁客</strong></td>
+        <td style="padding:10px;">消费满¥88送"下次半价券"（限一周内使用）</td>
+      </tr>
+      <tr>
+        <td style="padding:10px;font-weight:600;color:#C2185B;">🎯 C</td>
+        <td style="padding:10px;"><strong>引流到群</strong></td>
+        <td style="padding:10px;">加群参与"开业大转盘"抽奖（100%中奖）</td>
+      </tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="card-title">🎪 现场氛围</div>
+    <ul>
+      <li>门口设置"周小胖"起司猫人形立牌（奶橘色猫耳+围裙）😺</li>
+      <li>开业花篮 + 猫爪气球拱门 🐾 🎈</li>
+      <li>进店扫码送 🧡 起司猫爪钥匙扣小礼品</li>
+      <li>消费满¥100送"周小胖"定制围裙（带猫耳图案）</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 7. 大众点评合规运营 ==================== -->
+<section class="section" id="dianping">
+  <h2 class="section-title">✅ 大众点评合规运营</h2>
+  <div class="card">
+    <ul>
+      <li><strong>禁止刷单/刷评：</strong>所有评价必须真实消费产生，避免平台处罚</li>
+      <li><strong>引导好评技巧：</strong>消费后收银员话术引导——"如果觉得好吃，方便在大众点评上给我们个好评吗？谢谢周小胖的邻居～"</li>
+      <li><strong>团购核销后提示：</strong>收银系统自动弹出好评引导页面（非强制）</li>
+      <li><strong>打卡收藏有礼：</strong>收藏店铺送小菜/饮品，合规提升收藏量</li>
+      <li><strong>回复评价：</strong>所有评价24小时内回复，以"周小胖"口吻亲切回复（如"谢谢邻居捧场～下次来给你多加两串烤串～😺"）</li>
+      <li><strong>杜绝违规词：</strong>不使用"第一""最""绝对"等极限词</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 8. 收银系统配合流程 ==================== -->
+<section class="section" id="cashier">
+  <h2 class="section-title">💳 收银系统配合流程</h2>
+  <div class="card">
+    <ol>
+      <li><strong>团购核销 →</strong> 扫码验证团购券码 → 系统自动标记已核销</li>
+      <li><strong>赠券触发 →</strong> 消费满¥88自动打印"下次半价券"（系统生成电子券，微信卡包）</li>
+      <li><strong>加群引导 →</strong> 收银屏展示群二维码，收银员口播"扫码进群领红包～"</li>
+      <li><strong>好评引导 →</strong> 结账小票底部打印"大众点评好评送小菜"字样+二维码</li>
+      <li><strong>数据同步 →</strong> 每日20:00同步当日核销数据至社群运营台账</li>
+    </ol>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 9. 活动节奏总览 ==================== -->
+<section class="section" id="rhythm">
+  <h2 class="section-title">📅 活动节奏总览</h2>
+  <div class="card">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-date">📌 准备期 · D-10 ~ D-1</div>
+        <div class="tl-title">围挡搭建 + DM单制作 + 社群预热</div>
+        <p>围挡喷绘设计（起司猫IP形象 🧡😺），DM单印刷3,000份、创建社群、设置自动欢迎语</p>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">🔥 预热期 · D-7 ~ D-1</div>
+        <div class="tl-title">地推派发 + 社群蓄水</div>
+        <p>DM单派发周边小区+沿街商铺，社群每日红包雨+开业倒计时</p>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">🎊 爆发期 · D-Day ~ D+7</div>
+        <div class="tl-title">开业活动 + 现场促销</div>
+        <p>全场88折 + 抽奖 + 打卡送礼 + 大众点评团购上线</p>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">📈 积累期 · D+8 ~ D+21</div>
+        <div class="tl-title">口碑积累 + 复购培养</div>
+        <p>引导好评、社群优惠券推送、收集反馈优化菜品</p>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">🌟 稳定期 · D+22 ~ D+60</div>
+        <div class="tl-title">常态化运营 + 外卖冲量</div>
+        <p>日常社群运营、外卖平台稳定出单、邻里口碑自然传播</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 10. DM单派发策略 ==================== -->
+<section class="section" id="dm-dist">
+  <h2 class="section-title">📬 DM单派发策略</h2>
+  <div class="card">
+    <div class="card-title">📍 派发范围</div>
+    <ul>
+      <li><strong>周边3个小区：</strong>抗震里、杭州道小区、和平里（覆盖步行10分钟内居民）</li>
+      <li><strong>抗震路沿街商铺：</strong>周边商户互推（便利店、水果店、奶茶店等合作放置）</li>
+      <li><strong>社区出入口：</strong>小区快递驿站/丰巢柜投放DM单+桌贴广告</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title">📊 派发计划</div>
+    <table style="width:100%;font-size:14px;border-collapse:collapse;">
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);background:#FFF5F0;">
+        <td style="padding:8px;"><strong>地点</strong></td>
+        <td style="padding:8px;"><strong>数量</strong></td>
+        <td style="padding:8px;"><strong>方式</strong></td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+        <td>抗震里小区</td>
+        <td>1,000份</td>
+        <td>门缝塞入+快递驿站</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+        <td>杭州道小区</td>
+        <td>800份</td>
+        <td>门缝塞入+小区入口</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+        <td>和平里小区</td>
+        <td>800份</td>
+        <td>门缝塞入+快递驿站</td>
+      </tr>
+      <tr>
+        <td>抗震路沿街商铺</td>
+        <td>400份</td>
+        <td>商户合作+收银台放置</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 11. 地推人员话术 ==================== -->
+<section class="section" id="huashu">
+  <h2 class="section-title">🎙️ 地推人员话术</h2>
+  <div class="card">
+    <div class="card-title">🗣️ 社区话术 · 亲民风格</div>
+    <div style="background:#FFF5F0;border-radius:12px;padding:20px;margin-bottom:15px;">
+      <p style="font-style:italic;color:#4A0024;">
+        "您好邻居～我是对面新开的'周小胖砂锅烧烤'的，重庆砂锅和咱们天津烤串都有！开业有活动，<br>
+        扫这个码领 <span class="highlight-pink">¥19.9</span> 的尝鲜券，加群还能领红包～<br>
+        老板是重庆姑娘，嫁到咱们天津来的，就像起司猫一样可爱又热情 🧡😺，砂锅味道特别正宗，有空来尝尝哈！"
+      </p>
+    </div>
+    <ul>
+      <li><strong>核心要点：</strong>自称邻居、强调重庆风味+天津融合、突出开业优惠、起司猫人设</li>
+      <li><strong>目标动作：</strong>扫码领券 + 加群（两个二维码都要展示）</li>
+      <li><strong>应对拒绝：</strong>"没关系～这个是开业福利，扫一个也不耽误事，群里天天有红包呢～"</li>
+      <li><strong>派发时间：</strong>工作日 17:00-19:00（下班/放学时段）</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 12. 客流低谷应对 ==================== -->
+<section class="section" id="lowpeak">
+  <h2 class="section-title">📉 客流低谷应对</h2>
+  <div class="card">
+    <div class="card-title">💡 工作日午市特价</div>
+    <ul>
+      <li>周一至周五 11:00-13:30 推出 <span class="highlight-pink">"午市砂锅特价"</span>（比正常售价低¥5-8）</li>
+      <li>搭配 <span class="highlight-pink">"午间套餐"</span> ¥25.8（砂锅+米饭+小菜）</li>
+      <li>社群提前2小时推送午市特价预告</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title">🚀 外卖冲量</div>
+    <ul>
+      <li>美团外卖同步上线，覆盖周边3km社区</li>
+      <li>工作日推出 <span class="highlight-pink">"外卖专享满减"</span>（满25减5 / 满50减12）</li>
+      <li>社群推送"今日外卖暗号"——下单备注暗号送饮品</li>
+      <li>外卖包装附带"周小胖"感谢卡+社群二维码</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 13. 收银员话术标准化 ==================== -->
+<section class="section" id="cashier-talk">
+  <h2 class="section-title">🗨️ 收银员话术标准化</h2>
+  <div class="card">
+    <table style="width:100%;font-size:14px;border-collapse:collapse;">
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);background:#FFF5F0;">
+        <th style="padding:10px;text-align:left;width:80px;">环节</th>
+        <th style="padding:10px;text-align:left;">标准话术</th>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+        <td style="padding:10px;font-weight:600;">💳 核销</td>
+        <td style="padding:10px;">"好嘞～已为您核销，欢迎来周小胖家做客！😺"</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+        <td style="padding:10px;font-weight:600;">🎁 赠券</td>
+        <td style="padding:10px;">"您这单满88啦！送您一张下次半价券，一周内有效～"</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+        <td style="padding:10px;font-weight:600;">💬 加群</td>
+        <td style="padding:10px;">"扫码进群领红包，每天还有抽奖活动哦～"</td>
+      </tr>
+      <tr>
+        <td style="padding:10px;font-weight:600;">⭐ 好评</td>
+        <td style="padding:10px;">"如果觉得味道不错，方便在大众点评上给个好评吗～谢谢邻居！"</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 14. 预算汇总 ==================== -->
+<section class="section" id="budget">
+  <h2 class="section-title">💰 预算汇总</h2>
+  <div class="card">
+    <table class="budget-table">
+      <thead>
+        <tr>
+          <th>项目</th>
+          <th>明细</th>
+          <th>预估费用</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DM单印刷</td>
+          <td>A5双面128g铜版纸 × 3,000份</td>
+          <td>¥300-500</td>
+        </tr>
+        <tr>
+          <td>围挡喷绘</td>
+          <td>门店围挡设计+制作（含起司猫IP 🧡😺）</td>
+          <td>¥500-800</td>
+        </tr>
+        <tr>
+          <td>开业氛围布置</td>
+          <td>花篮8个 + 猫爪气球拱门 + 人形立牌</td>
+          <td>¥600-900</td>
+        </tr>
+        <tr>
+          <td>社群红包+优惠券</td>
+          <td>开业红包 + 社群激励</td>
+          <td>¥500-800</td>
+        </tr>
+        <tr>
+          <td>地推人员费用</td>
+          <td>2人 × 3天</td>
+          <td>¥600-900</td>
+        </tr>
+        <tr>
+          <td>小礼品采购</td>
+          <td>起司猫爪钥匙扣+定制围裙+饮品</td>
+          <td>¥500-700</td>
+        </tr>
+        <tr>
+          <td>美团外卖运营</td>
+          <td>开店宝 + 推广通初始充值</td>
+          <td>¥1,000-1,500</td>
+        </tr>
+        <tr class="total">
+          <td colspan="2" style="text-align:right;"><strong>总计</strong></td>
+          <td><strong>¥4,500-5,500</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 15. KPI目标 ==================== -->
+<section class="section" id="kpi">
+  <h2 class="section-title">🎯 KPI目标</h2>
+  <div class="card">
+    <div class="kpi-grid">
+      <div class="kpi-item">
+        <div class="kpi-num">4.5+</div>
+        <div class="kpi-label">⭐ 大众点评评分</div>
+        <div class="kpi-sub">首月目标</div>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-num">200+</div>
+        <div class="kpi-label">❤️ 店铺收藏</div>
+        <div class="kpi-sub">大众点评收藏量</div>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-num">15-25</div>
+        <div class="kpi-label">📦 日均单量</div>
+        <div class="kpi-sub">首月堂食+外卖/天</div>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-num">200+</div>
+        <div class="kpi-label">💬 私域社群</div>
+        <div class="kpi-sub">首月进群人数</div>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-num">4.8+</div>
+        <div class="kpi-label">🥡 外卖评分</div>
+        <div class="kpi-sub">美团外卖评分</div>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-num">3km</div>
+        <div class="kpi-label">🗺️ 外卖覆盖</div>
+        <div class="kpi-sub">周边社区全覆盖</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 16. 竞品分析 ==================== -->
+<section class="section" id="competitors">
+  <h2 class="section-title">🏆 竞品分析</h2>
+  <div class="card">
+    <div class="card-title">📍 塘沽同类砂锅烧烤竞品</div>
+    <table style="width:100%;font-size:14px;border-collapse:collapse;">
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);background:#FFF5F0;">
+        <th style="padding:10px;text-align:left;">竞品</th>
+        <th style="padding:10px;text-align:left;">优势</th>
+        <th style="padding:10px;text-align:left;">劣势</th>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+        <td style="padding:10px;font-weight:600;">某重庆砂锅店</td>
+        <td style="padding:10px;">品牌成熟、口味稳定</td>
+        <td style="padding:10px;">价格偏高、缺少人设、服务标准化有余温度不足</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(216,27,96,0.1);">
+        <td style="padding:10px;font-weight:600;">某天津烧烤店</td>
+        <td style="padding:10px;">本地口碑、老客稳定</td>
+        <td style="padding:10px;">品类单一、缺乏新客获取手段、无社群运营</td>
+      </tr>
+      <tr>
+        <td style="padding:10px;font-weight:600;">某连锁砂锅品牌</td>
+        <td style="padding:10px;">标准化强、供应链成熟</td>
+        <td style="padding:10px;">缺乏社区亲切感、价格高、千店一面</td>
+      </tr>
+    </table>
+  </div>
+  <div class="card" style="background:linear-gradient(135deg,#FFF5F0,#FDF8F5);">
+    <div class="card-title">💪 周小胖核心竞争力</div>
+    <ul>
+      <li><strong>人设差异化：</strong>"周小胖"起司猫老板IP 🧡😺 是独一无二的情感连接</li>
+      <li><strong>品类融合：</strong>重庆砂锅+天津烤串 = 独一无二的"渝津融合"定位</li>
+      <li><strong>社区渗透：</strong>深耕周边3个小区，邻里关系是最大护城河</li>
+      <li><strong>价格优势：</strong>人均¥40-50 vs 竞品¥60-80，性价比突出</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cat-whiskers">
+<span>—</span> 🧡 <span>🐾</span> 😺 <span>🐾</span> 🧡 <span>—</span>
+</div>
+
+<!-- ==================== 17. 总结 ==================== -->
+<section class="section" id="summary">
+  <h2 class="section-title">📝 总结</h2>
+  <div class="card" style="background:linear-gradient(135deg,#FFF5F0,#F8F0E3);border-left:4px solid #C2185B;">
+    <p style="font-size:16px;line-height:2;">
+      <strong>周小胖砂锅烧烤</strong> 是一家典型的 <span class="highlight-pink">社区小店</span> —— 80㎡的面积、¥40-50的人均、重庆砂锅和天津烤串的融合定位，决定了它的成功密码不在大而全的营销轰炸，而在 <strong>邻里温度 + 老板人设 + 外卖增量</strong> 这三个关键词。
+    </p>
+    <p style="margin-top:15px;font-size:16px;line-height:2;">
+      "周小胖"这个IP本身就是最好的品牌资产——一个像 <strong>起司猫 🧡😺</strong> 一样软萌可爱的重庆姑娘嫁到天津开的砂锅店，既有重庆的麻辣热情，又有天津的幽默实在。<span class="highlight-pink">围挡蓄水、邻里地推、社群锁客、外卖增量</span> 四步走，以 <strong>¥4,500-5,500</strong> 的低成本预算，撬动首月 <strong>日均15-25单、评分4.5+、私域200+</strong> 的目标。
+    </p>
+    <p style="margin-top:15px;font-size:16px;line-height:2;">
+      这是一场"小而美"的社区餐饮实验——用老板的真实故事打动人，用邻里特惠留住人，用好味道让口碑自然传播。<strong>🧡😺 周小胖，加油！</strong>
+    </p>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+<!-- Footer -->
+<div class="footer">
+  <div class="paw-line">🐾 🧡 😺 🧡 🐾 🧡 😺 🧡 🐾</div>
+  <p>周小胖砂锅烧烤 · 开业营销方案 · 2025</p>
+  <p style="margin-top:5px;">📍 天津塘沽杭州道街道抗震路 · 🧡😺 老板周小胖（起司猫姑娘）</p>
+</div>
+
+</div>
+
+<!-- ==================== JavaScript ==================== -->
+<script>
+// Strategy Lock
+function unlockStrategy() {
+  const pwd = document.getElementById('pwdInput').value;
+  const error = document.getElementById('pwdError');
+  const content = document.getElementById('strategyContent');
+  const lock = document.getElementById('strategyLock');
+
+  if (pwd === '888') {
+    lock.style.display = 'none';
+    content.classList.add('active');
+  } else {
+    error.style.display = 'block';
+    setTimeout(() => { error.style.display = 'none'; }, 2000);
+  }
+}
+
+// Enter key support
+document.getElementById('pwdInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') unlockStrategy();
+});
+
+// Scroll animation - cards fade in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.card').forEach((el, i) => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = `all 0.6s ease ${i * 0.08}s`;
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
